@@ -1,111 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
-	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<meta charset="utf-8">
-	<title>just another development blog  | csuarez</title>
+  <title><![CDATA[Category: desymfony | csuarez]]></title>
+  <link href="http://csuarez.github.io/blog/categories/desymfony/atom.xml" rel="self"/>
+  <link href="http://csuarez.github.io/"/>
+  <updated>2013-06-26T19:33:55+02:00</updated>
+  <id>http://csuarez.github.io/</id>
+  <author>
+    <name><![CDATA[César Suárez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-<meta name="author" content="César Suárez"> 
-
-<meta name="description" content="Blog personal de César Suárez"> <meta name="keywords" content="">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<link href="/atom.xml" rel="alternate" title="csuarez" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="/fancybox/jquery.fancybox.pack.js"></script>
-
-<script language="Javascript" type="text/javascript">
-$(document).ready(
-  function() {
-    (function($) {
-      $(".fancybox[data-content-id]").each(function() {
-        this.href = $(this).data('content-id');
-      });
-      $(".fancybox").fancybox({
-        beforeLoad: function() {
-          var el, 
-              id = $(this.element).data('title-id');
-
-          if (id) {
-            el = $('#' + id);
-
-            if (el.length) {
-              this.title = el.html();
-            }
-          }
-          if ($(this).data('content')) {
-            this.content = $(this).data('content');
-          }
-        },
-        helpers: {
-          title: {
-            type: 'inside'
-          }
-        }
-      });
-    })(jQuery);
-  }
-);
-</script>
-	
-</head>
-
-
-<body>
-	<header id="header" class="inner"><h1><a href="/">csuarez</a></h1>
-<h4>just another development blog</h4>
-<nav id="main-nav"><ul>
-	<li><a href="/">Blog</a></li>
-	<li><a href="/about">About</a></li>
-	<li><a href="/portfolio">Portfolio</a></li>
-	<li><a href="/archives">Archive</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul>
-	<li><a href="/">Blog</a></li>
-	<li><a href="/about">About</a></li>
-	<li><a href="/portfolio">Portfolio</a></li>
-	<li><a href="/archives">Archive</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:csuarez.github.io">
-			</form>
-		</div>
-	</div>
-</nav>
-
-
-</header>
-
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/06/24/desymfony-2013/">
-		
-			deSymfony 2013</a>
-	</h2>
-	<div class="entry-content">
-		<p>Este era el cuarto año (¡cuarto!) que se celebraba <strong><a href="http://desymfony.com/">deSymfony</a></strong> una de las mayores conferencias que se hacen en el mundo sobre el framework <strong>Symfony</strong> (porque ya repetir que es las más grande de habla hispana cae sobre su propio peso). Este año se encontraba con el reto de moverse de su emplazamiento original (Castellón) a la capital, un sitio que entiendo que es mejor logísticamente.</p>
+  
+  <entry>
+    <title type="html"><![CDATA[deSymfony 2013]]></title>
+    <link href="http://csuarez.github.io/blog/2013/06/24/desymfony-2013/"/>
+    <updated>2013-06-24T23:37:00+02:00</updated>
+    <id>http://csuarez.github.io/blog/2013/06/24/desymfony-2013</id>
+    <content type="html"><![CDATA[<p>Este era el cuarto año (¡cuarto!) que se celebraba <strong><a href="http://desymfony.com/">deSymfony</a></strong> una de las mayores conferencias que se hacen en el mundo sobre el framework <strong>Symfony</strong> (porque ya repetir que es las más grande de habla hispana cae sobre su propio peso). Este año se encontraba con el reto de moverse de su emplazamiento original (Castellón) a la capital, un sitio que entiendo que es mejor logísticamente.</p>
 
 <p>Algunos pueden pensar que deSymfony puede ser algo tal que una secta de adoradores onanistas de <a href="http://fabien.potencier.org/">Fabien Poténcier</a> y que las jornadas transcurrirían algo así <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>:</p>
 
@@ -174,139 +87,7 @@ $(document).ready(
 </ol>
 </div>
 
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
+]]></content>
+  </entry>
   
-
-
-<time datetime="2013-06-24T23:37:00+02:00" pubdate data-updated="true">Jun 24<span>th</span>, 2013</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/desymfony/'>desymfony</a>, <a class='category' href='/blog/categories/eventos/'>eventos</a>, <a class='category' href='/blog/categories/symfony/'>symfony</a>
-
-
-</div>
-	
-</div></article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2013/06/13/hola-de-nuevo-%24/">
-		
-			Hola De Nuevo :$</a>
-	</h2>
-	<div class="entry-content">
-		<p>Hace un tiempo escribía esto <a href="http://scriptogr.am/csuarez">aquí</a></p>
-
-<blockquote><p>Bienvenidos a mi blog personal sobre desarrollo y derivados :D.</p>
-
-<p>Llevo mucho tiempo pensando en abrir alguna página/blog/tumblr para poner algunas cosas sobre desarrollo, metodologías, diseño y demás artes oscuras, pero nunca me terminaba de decidir. Llamadlo pereza si queréis, pero más de una vez he tenido alguna ideilla, y por no tener una web donde ponerla, he pasado de escribir nada. La cuestión es que hace poco probé scriptogr.am y casi sin querer me encontré con un blog hecho, así que me dije &ldquo;eso, ¿y por qué no?&rdquo;&ldquo; (cual señorita de anuncio de Teletienda).</p>
-
-<p>No prometo ningún tipo de periodicidad, ni temática aproximada, ni nada; simplemente cuando tenga algo que considere interesante lo publicaré (siempre sobre desarrollo, para off-topics ya tengo Twitter).</p>
-
-<p>Y poco más. ¡Hasta más ver! :D</p></blockquote>
-
-<p>La cosa es que <a href="http://scriptogr.am/">scriptogr.am</a> no me terminó de convencer, me lo hice por pereza por no currarme una plantilla de Jekyll y bueno, &hellip; ¡Qué esta es la buena! ¡Lo prometo! ¡Este es mi blog definitivo! ¡Qué Octopress mola y me lo quedo!</p>
-
-<p>Ya sé que esta todo muy cogido por pinzas, pero he pensado que cuanto antes lo publique antes voy a ponerme a tunear cosas poco a poco.</p>
-
-<p>De nuevo: ¡Hasta más ver!</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-13T20:54:00+02:00" pubdate data-updated="true">Jun 13<span>th</span>, 2013</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/tontunas/'>tontunas</a>
-
-
-</div>
-	
-</div></article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
-
-    César Suárez
-
-<br>
-Powered by Octopress.
-</footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
-
-<script type="text/javascript">
-      var disqus_shortname = 'just-another-development-blog';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-38378447-1']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-
-
-
-</body>
-</html>
+</feed>

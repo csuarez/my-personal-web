@@ -100,6 +100,114 @@ $(document).ready(
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2013/06/24/desymfony-2013/">
+		
+			deSymfony 2013</a>
+	</h2>
+	<div class="entry-content">
+		<p>Este era el cuarto año (¡cuarto!) que se celebraba <strong><a href="http://desymfony.com/">deSymfony</a></strong> una de las mayores conferencias que se hacen en el mundo sobre el framework <strong>Symfony</strong> (porque ya repetir que es las más grande de habla hispana cae sobre su propio peso). Este año se encontraba con el reto de moverse de su emplazamiento original (Castellón) a la capital, un sitio que entiendo que es mejor logísticamente.</p>
+
+<p>Algunos pueden pensar que deSymfony puede ser algo tal que una secta de adoradores onanistas de <a href="http://fabien.potencier.org/">Fabien Poténcier</a> y que las jornadas transcurrirían algo así <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>:</p>
+
+<p><img class="center" src="/images/false-desymfony.png"></p>
+
+<p>Sin embargo cualquiera que ya asistiese el año pasado adivinaría que las conferencias fueron tal que así:</p>
+
+<p><img class="center" src="/images/true-desymfony.png"></p>
+
+<p>deSymfony con los años no sólo se ha convertido en una cita ineludible para los que desarrollamos con Symfony, si no también para cualquier desarrollador con ganas de programar en PHP <strong>BIEN</strong>. Redis, Silex, AngularJS, Drupal 8, Sphinx, Erlang, LESS, rendimiento, monitorización, &hellip; De todo eso y más se hablado en esta deSymfony 2013. Y un servidor va a comentaros que tal fueron las charlas a las que pudo asistir (desde un punto de vista constructivo, espero que no se enfade nadie):</p>
+
+<h3>Keynote de Fabien Poténcier</h3>
+
+<p>Las jornadas empezaban con el a priori plato fuerte de día: una keynote de Fabien, creador de Symfony, hablando sobre &ldquo;calidad&rdquo;. La primera parte de la charla trató sobre diversos analizadores estáticos de código PHP (nada nuevo bajo el sol) y sus problemas (con algunas reflexiones bastante interesantes). Luego Fabien nos hizo un &ldquo;vengo a hablar de mi libro&rdquo; y nos estuvo presentando <a href="https://insight.sensiolabs.com/">SensioLabs Insight</a>, un analizador estático bastante visual y con características de gamification. MEH.</p>
+
+<h3>Creando aplicaciones web desde otro ángulo con Symfony y AngularJS</h3>
+
+<p>Charla muy completa, pero de caracter claramente introductorio al framework MVC Javascript de moda: <a href="http://angularjs.org/">AngularJS</a>. Llevo unos días en <a href="http://www.ceta-ciemat.es">CETA-Ciemat</a> empezando a trastear con él y apenas aprendí nada nuevo, pero la gente que no había tocado el framework salió encantada y hay que reconocer que el contenido estuvo muy bien organizado. La charla terminó con un aplicación de ejemplo de la que poco se pudo ver por cuestiones de tiempo.</p>
+
+<h3>Desglosando el componente de seguridad</h3>
+
+<p>Reconozco que tengo como asignatura pendiente ponerme con el componente de seguridad de Symfony2, así que me obligué a ir a la charla sobre el mismo. A pesar de ser un tema potencialmente tedioso, Joan explicó con claridad y bastantes ejemplos su diseño, todo ello aderezado de bastante sentido de humor. Toda una gesta.</p>
+
+<h3>Formularios y REST</h3>
+
+<p>En CETA-Ciemat andamos trabajando en un proyecto mega-super-secreto y yo a manera personal en otro ultra-hiper-secreto en el que ando viendo como construir una API REST de la forma más sencilla posible aprovechando los componentes Symfony2. Obviamente esto hacía que esta charla fuese otro <em>must</em> para mí. Moisés dio un buen repaso sobre lo que es un servicio RESTful y las ventajas del <a href="https://github.com/FriendsOfSymfony/FOSRestBundle">FOSRestBundle</a>. Luego explicó como usar el componente de formularios para validar los datos que recibe un servicio REST. Comparto con la gente las dudas sobre el rendimiento del asunto, pero no dejaba de ser un enfoque bastante ingenioso. Lo probaré y espero contaros que tal.</p>
+
+<h3>Testing aplicado en Symfony2</h3>
+
+<p>Una de las charlas más celebradas por el hashtag de Twitter, jolgorio que no comparto. Primero porque estaba hecha con Prezi. Prezi es el mal. Es la evolución de las presentaciones noventeras llenas de efectos, pero más barrocas, más mareantes, y generalmente dan como resultado unas representaciones conceptuales de lo más confusas. Recordad chicas y chicos: PREZI ES CACA. Aparte de eso la primera mitad de la charla trato sobre las ventajas del testing de software y la segunda consistió en un Kamasutra del testing de Symfony2: Marcos Quesada nos ofreció una mareante lista para testear todos los agujeros del framework en todas las posiciones posibles. ¿El problema? 1) Los ejemplos podrían haber sido más didácticos, no C&amp;P de código &ldquo;real&rdquo; y 2) los ejemplos eran realmente avanzados y pasaban a velocidad de vértigo, por lo que hacía imposible enterarse de absolutamente nada. El contenido de la presentación fue de 10, pero la presentación del mismo no me gustó. Seguramente cuando vea las diapositivas en casa se abra un universo de posibilidades ante mí, pero quizás el formato charla no fuese el más adecuado para el contenido (¿qué tal un artículito?).</p>
+
+<h3>Frontal avanzado y Assetic</h3>
+
+<p>No esperaba mucho de esta charla, pero me resultó la mejor de las jornadas. Miquel Company dio un repaso sobre mil temas del desarrollo de frontend, hilando unos con otros de manera sutil y amena. Supo mantener la grandes dosis de humor de la charla (con vídeos monguers incluídos) en niveles aceptables para que no eclipsase el contenido de la misma. Además me sirvió para recordar que tenía que probar <a href="http://lesscss.org/">LESS</a>, así que como resultado lo ando usando ahora en un proyecto nuevo y reconozco que me toco un poquito cuando nadie me mira. BRAVO.</p>
+
+<h3>Integrando Redis en aplicaciones Symfony2</h3>
+
+<p>Después de nightworking del viernes (de ese no hago crónica, lo siento :_D), elegí la charla de Redis, palabro que he escuchado mil veces pero que no me había puesto a indagar que narices era eso. Ronny López hizo que todas mis dudas se disiparan: en una hora le dio tiempo de explicarnos muchísimas características de Redis e incluso de darnos ejemplos de uso, consejos, experiencias, &hellip; Todo muy claro y al grano. Gran charla.</p>
+
+<h3>Escalabilidad y alto rendimiento con Symfony2</h3>
+
+<p>De (más) mayor quiero ser como Ricard. Es difícil encontrarte con semejante cantidad de consejos sobre cómo mejorar el rendimiento de aplicaciones PHP que tienen que gestionar grandes volúmenes de tráfico. Y desde la experiencia. Y con humor (¡rendimiento y humor!). Lo dicho, que quiero ser como él.</p>
+
+<h3>Escalar un proyecto más allá, un nuevo mundo concurrente</h3>
+
+<p>De nuevo Prezi. MAL MAL MAL. Aparte de eso, repetía Marcos Quesada con Jordi Llonch para hablar de Erlang. La cosa es que no me enteré ni muy bien de las ventajas prácticas de Erlang, ni del lenguaje en sí, aunque entiendo que tiene que ser complicado explicar un lenguaje funcional ante gente que seguramente no haya tocado uno en la vida (no es mi caso), pero el enfoque tan orientado a patrones no me convenció. La charla terminó con una demo en la que se creaban un millón de procesos en un portátil, muy espectacular pero tampoco me enteré de que iba el asunto. A lo mejor es que me faltaba cafeína en la sangre.</p>
+
+<h3>Silex al límite</h3>
+
+<p>Todas las charlas que he visto de Javier Eguiluz siempre me han resultado sobresalientes, y esta vez no falló. Más técnico que otras veces, nos explicó múltiples formas de mejorar el rendimiento de Silex y luego otros tantos ejemplos de uso avanzado de este microframework. Una charla que, a pesar de ser de corte avanzado, se comprendió bastante bien.</p>
+
+<h3>Novedades en Symfony 2.3</h3>
+
+<p>Y gracias a los chicos de <a href="http://www.solucionex.com/">Solucionex</a> pude quedarme un rato más para ver la última charla de la jornada, centrada en hablar de futuro de Symfony2. Muchas cositas nos trae Symfony 2.3 y espero toquetearlas cuanto antes. Una charla liviana (no por ello menos interesante) perfecta para cerrar las jornadas.</p>
+
+<p>Y hasta aquí el desglose por charlas. Si habéis llegado hasta aquí, gracias. Luego tocó el sorteo de rigor (gané una licencia de PHPStorm JEJEJE) y de vuelta a Cáceres. Sobre otros temas del evento, comentar que, aunque logísticamente Madrid es mejor que Castellón (que voy a decir yo, que el viaje de Cáceres a Castellón en bús/tren es una odisea poco recomendable), hace que el evento pierda un poco el caracter familiar que acompaña a estas conferencias. El poder juntarse fácilmente después de la charla daba la oportunidad de conocer a gente nueva y hablar tranquilamente con viejos conocidos. Cosa que este año ha sido complicado. El otro punto negativo fue la comida: largas colas para comer rancho de presos, nada que ver con esos sudorosos gitanos desfilando paelleras de delicioso contenido en Castellón. Entiendo que la organización poco puede hacer ante eso (si la comida de la universidad es una mierda poco se puede hacer), pero creo que es algo a comentar. El resto como siempre: organización maravillosa, muchas risas, muchos amigos y unos días geniales hablando de una de mis principales herramientas de trabajo, cosa que no puedo hacer casi nunca.</p>
+
+<p>Esperemos que el año que viene podamos repetir con una deSymfony 2014.</p>
+
+<p>P.D. Ya sé que el blog está muy a medias :_D.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>En realidad quería usar <a href="http://labibliaatea.files.wordpress.com/2011/05/129157560493033650.gif?w=908">este gif</a>, pero era demasiado curro :( <a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-24T23:37:00+02:00" pubdate data-updated="true">Jun 24<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/desymfony/'>desymfony</a>, <a class='category' href='/blog/categories/eventos/'>eventos</a>, <a class='category' href='/blog/categories/symfony/'>symfony</a>
+
+
+</div>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2013/06/13/hola-de-nuevo-%24/">
 		
 			Hola De Nuevo :$</a>
@@ -147,8 +255,6 @@ $(document).ready(
 
 
 </div>
-	
-		<span class="comments"><a href="/blog/2013/06/13/hola-de-nuevo-%24//index.html#disqus_thread">Comments</a></span>
 	
 </div></article>
 
