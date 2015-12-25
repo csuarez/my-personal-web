@@ -16,19 +16,29 @@
         </div>
       </section>
       <section id="about" class="row">
-        <h2>About me</h2>
+        <div class="content">
+          {{ partial "frontpage/about.html" }}
+        </div>
       </section>
       <section id="projects" class="row">
-        <h2>Projects</h2>
+        <div class="content">
+          {{ partial "frontpage/projects.html" }}
+        </div>
       </section>
       <section id="talks" class="row">
-        <h2>Talks</h2>
+        <div class="content">
+          {{ partial "frontpage/talks.html" }}
+        </div>
       </section>
       <section id="pubs" class="row">
-        <h2>Publications</h2>
+        <div class="content">
+          {{ partial "frontpage/publications.html" }}
+        </div>
       </section>
       <section id="contact" class="row">
-        <h2>Contact</h2>
+        <div class="content">
+          {{ partial "frontpage/contact.html" }}
+        </div>
       </section>
     </div>
     {{ partial "footer.html" }}

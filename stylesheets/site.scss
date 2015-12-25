@@ -6,15 +6,25 @@ $color2: #655989;
 $color3: #DE88A5;
 $color4: #FFCEBB;
 
+.front-page {
+  section {
+    padding: $padding-large-vertical*2 $padding-large-horizontal*2;  
+  }
+  .content {
+    max-width: $container-desktop;
+    margin: auto;
+    text-align: center;
+    h2 {
+      margin: 0 auto;
+    }
+  }
+}
+
 //Frontpage
 #cover {
   display: flex;
   height: 100vh;
-  text-align: center;
   background: $color1;
-  .content {
-    margin: auto;
-  }
 }
 
 #about {
