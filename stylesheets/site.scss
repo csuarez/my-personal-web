@@ -1,7 +1,38 @@
 @import '_bootstrap';
+@import '_navbar';
 
-$background-color: chocolate;
+$color1: #7A9EAF;
+$color2: #655989;
+$color3: #DE88A5;
+$color4: #FFCEBB;
 
-body {
-  background-color: $background-color;
+//Frontpage
+#cover {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  background: $color1;
+  .content {
+    margin: auto;
+  }
+}
+
+#about {
+  background: $color2;
+}
+
+#projects {
+  background: $color3;
+}
+
+#talks {
+  background: $color4;
+}
+
+#pubs {
+  background: $color1;
+}
+
+#contact {
+  background: $color2;
 }
