@@ -5,4 +5,4 @@ technologies = []
 title = "beet"
 url = ""
 +++
-bla bla bla bla bla bla
+Aquí va una descripción muy ingeniosa sobre **B.E.E.T.**
