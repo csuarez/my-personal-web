@@ -6,6 +6,7 @@ var shell = require('gulp-shell');
 var watch = require('gulp-watch');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
+var connect = require('gulp-connect');
 
 
 var sassInput = './stylesheets/**/*.scss';
@@ -23,15 +24,48 @@ var hugoInput = [
   'static/**/*.*'
 ];
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['serve']);
 
 gulp.task('build', ['hugo', 'sass']);
 
-gulp.task('hugo', shell.task([
-  'hugo',
-]))
+gulp.task('hugo', function() {
+  return executeGulpHugo();
+});
 
 gulp.task('sass', function () {
+  return executeGulpSass();
+});
+
+gulp.task('watch', function() {
+  watch(sassInput, function (vinyl) {
+    gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
+    return executeGulpSass().pipe(connect.reload());
+  });
+  watch(hugoInput, function (vinyl) {
+    gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
+    return executeGulpHugo().pipe(connect.reload());
+  });
+});
+
+gulp.task('serve', function() {
+  connect.server({
+      'root': 'public',
+      'livereload': true,
+      'port': 6789
+  });
+  gulp.start('watch');
+});
+
+function executeGulpHugo() {
+  return gulp
+    .src('')
+    .pipe(shell([
+      'hugo'
+    ]
+  ));
+}
+
+function executeGulpSass() {
   return gulp
     .src(sassInput)
     .pipe(plumber({
@@ -42,18 +76,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(gulp.dest(sassOutput));
-});
-
-gulp.task('watch', function() {
-  watch(sassInput, function (vinyl) {
-    gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
-    gulp.start('sass');
-  });
-  watch(hugoInput, function (vinyl) {
-    gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
-    gulp.start('hugo');
-  });
-});
+}
 
 function handleError(error) {
   gutil.beep();
