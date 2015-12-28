@@ -60,7 +60,7 @@ function executeGulpHugo() {
   return gulp
     .src('')
     .pipe(shell([
-      'hugo'
+      'hugo --buildDrafts'
     ]
   ));
 }
