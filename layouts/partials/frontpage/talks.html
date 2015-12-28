@@ -1,7 +1,9 @@
 <h2>Talks</h2>
-<div class="col-sm-4">1</div>
-<div class="col-sm-4">2</div>
-<div class="col-sm-4">3</div>
+{{ range first 3 (where .Site.Pages "Section" "talk") }}
+  <div class="col-sm-4">
+    {{ .Render "summary" }}
+  </div>
+{{ end }}
 <div class="col-sm-12">
-  <a href="#" class="btn btn-default">See all</a>
+  <a href="project/" class="btn btn-default">See all</a>
 </div>

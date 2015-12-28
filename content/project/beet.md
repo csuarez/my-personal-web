@@ -5,7 +5,7 @@ technologies = ["HTML", "SASS", "Javascript", "Gulp"]
 title = "B.E.E.T."
 url = ""
 subtitle = "A bot which promotes tech events on Extremadura"
-logo = "img/projects/beet-logo.png"
+featured_image = "img/projects/beet-logo.png"
 +++
 **B.E.E.T.** (**B**ot **E**xtremeño de **E**ventos **T**ecnológicos) is a project created to promote tech events in Extremadura. It gathers information about them at [beet.tech](http://beet.tech) and schedules retweets at [@botbeet](http://www.twitter.com/botbeet) to promote them.
 

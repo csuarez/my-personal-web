@@ -3,5 +3,5 @@ url = ""
 github_url = ""
 technologies = []
 subtitle = ""
-logo = ""
+featured_image = ""
 +++
