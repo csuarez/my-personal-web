@@ -1,14 +1,15 @@
 @import '_bootstrap';
-@import '_navbar';
 
-$color1: #7A9EAF;
-$color2: #655989;
-$color3: #DE88A5;
-$color4: #FFCEBB;
+$color0: #222831;
+$color1: #393E46;
+$color2: #00ADB5;
+$color3: #EEEEEE;
+
+@import '_navbar';
 
 .front-page {
   section {
-    padding: $padding-large-vertical*2 $padding-large-horizontal*2;  
+    padding: $padding-large-vertical*2 $padding-large-horizontal*2;
   }
   .content {
     max-width: $container-desktop;
@@ -24,25 +25,76 @@ $color4: #FFCEBB;
 #cover {
   display: flex;
   height: 100vh;
-  background: $color1;
+  background: $color0;
+  & + section {
+    border-top: $color0 1.5em dashed;
+  }
+  color: $color3;
+  font-family: 'Open Sans', sans-serif;
+  h1 {
+    color: $color2;
+    font-size: 7em;
+    text-transform: lowercase;
+    font-family: 'Bree Serif', serif;
+  }
+  h2 {
+    color: $color3;
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  img {
+    border-radius: 300px;
+    border: 20px solid $color1;
+  }
 }
 
 #about {
-  background: $color2;
+  background: $color1;
+  color: $color3;
+  text-align: left;
+  & + section {
+    border-top: $color1 1.5em dashed;
+  }
+  .content {
+    text-align: left;
+    font-size: 1.5em;
+    h2 {
+      color: $color3;
+      font-family: 'Bree Serif', serif;
+      text-transform: lowercase;
+      font-size: 5em;
+      text-align: center;
+    }
+    h3 {
+      font-size: 1.5em;
+      font-family: 'Bree Serif', serif;
+      text-transform: uppercase;
+      color: $color2;
+    }
+    ul {
+      padding-left: 2em;
+      li {
+        margin-bottom: 0.3em;
+      }
+      li.with-children {
+        font-weight: 800;
+      }
+      & + ul {
+        padding-left: 2em;
+      }
+    }
+  }
 }
 
 #projects {
-  background: $color3;
+  background: $color2;
 }
 
 #talks {
-  background: $color4;
+  background: $color3;
 }
 
 #pubs {
-  background: $color1;
-}
-
-#contact {
-  background: $color2;
+  background: #FFFFFF;
 }

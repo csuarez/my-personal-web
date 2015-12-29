@@ -1,6 +1,20 @@
 .nav {
-  li > a:hover {
-    background: none;
+  li > a {
+    border: 2px $color1 solid;
+    background-color: $color0;
+    color: $color3;
+    padding: 0.5em;
+    margin: 0.5em;
+    margin-top: 1em;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 2em;
+    text-transform: uppercase;
+    &:hover {
+      background: none;
+      background-color: $color1;
+      transition: all ease-out 0.2s;
+    }
   }
 }
 
