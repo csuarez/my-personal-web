@@ -75,6 +75,15 @@ $color3: #EEEEEE;
   }
 }
 
+#talks {
+  h2 {
+    color: $color1;
+  }
+  & + section {
+    border-top: $color3 1.5em dashed;
+  }
+}
+
 .column-list {
   text-align: right;
   padding-right: 3em;
@@ -188,6 +197,22 @@ $color3: #EEEEEE;
         margin: auto;
         max-width: 100%;
         max-height: 200px;
+      }
+    }
+  }
+}
+
+#talks {
+  .summary {
+    a {
+      h3 {
+        font-size: 1em;
+        color: $color1;
+        border-bottom: 3px dashed $color2;
+        min-height: 3em;
+      }
+      .subtitle {
+        color: $color0;
       }
     }
   }
