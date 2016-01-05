@@ -66,25 +66,45 @@ $color3: #EEEEEE;
       font-size: 5em;
       text-align: center;
     }
-    h3 {
-      font-size: 1.5em;
-      font-family: 'Bree Serif', serif;
-      text-transform: uppercase;
-      color: $color2;
+  }
+}
+
+.column-list {
+  text-align: right;
+  padding-right: 3em;
+  h3 {
+    font-size: 1.5em;
+    font-family: 'Bree Serif', serif;
+    text-transform: uppercase;
+    color: $color2;
+    border-bottom: 3px dashed $color2;
+  }
+  ul {
+    padding-bottom: 0.5em;
+    list-style-position: inside;
+    li {
+      margin-bottom: 0.3em;
+      span.sub {
+        display: block;
+        font-size: 0.745em;
+        width: 100%;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        font-style: italic;
+      }
     }
-    ul {
-      padding-left: 2em;
-      li {
-        margin-bottom: 0.3em;
-      }
-      li.with-children {
-        font-weight: 800;
-      }
+    li.featured {
+      font-weight: 800;
+      text-decoration: underline;
       & + ul {
-        padding-left: 2em;
+        margin-bottom: 0.5em;
       }
     }
   }
+}
+
+.column-list + .column-list {
+  text-align: left;
 }
 
 #projects {
@@ -97,4 +117,40 @@ $color3: #EEEEEE;
 
 #pubs {
   background: #FFFFFF;
+}
+
+.btn.btn-default {
+  text-transform: uppercase;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  font-weight: 800;
+  position: relative;
+  font-size: 24px;
+  background: $color0;
+  border: 0.5em solid $color0;
+  border-left: 0.75em solid $color0;
+  border-right: 0.75em solid $color0;
+  color: $color3;
+  &:hover {
+    background: $color0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: $color3;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }
