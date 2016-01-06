@@ -1,42 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>It's me, César Suárez</title>
-    <meta charset="utf-8">
-    {{ partial "stylesheets.html" }}
-  </head>
-  <body class="front-page">
-    {{ partial "navbar.html" }}
-    <div class="container-fluid">
-      <section id="cover" class="row">
-        <div class="content">
-          <img src="img/avatar.jpg" alt="Fancy photo of me"/>
-          <h1>César Suárez Ortega</h1>
-          <h2>Software Developer // Researcher</h2>
-        </div>
-      </section>
-      <section id="about" class="row">
-        <div class="content">
-          {{ partial "frontpage/about.html" }}
-        </div>
-      </section>
-      <section id="projects" class="row">
-        <div class="content">
-          {{ partial "frontpage/projects.html" . }}
-        </div>
-      </section>
-      <section id="talks" class="row">
-        <div class="content">
-          {{ partial "frontpage/talks.html" . }}
-        </div>
-      </section>
-      <section id="pubs" class="row">
-        <div class="content">
-          {{ partial "frontpage/publications.html" . }}
-        </div>
-      </section>
+{{ partial "pre-content.html" . }}
+<div class="container-fluid front-page">
+  <section id="cover" class="row">
+    <div class="content">
+      <img src="img/avatar.jpg" alt="Fancy photo of me"/>
+      <h1>César Suárez Ortega</h1>
+      <h2>Software Developer // Researcher</h2>
     </div>
-    {{ partial "footer.html" }}
-    {{ partial "scripts.html" }}
-  </body>
-</html>
+  </section>
+  <section id="about" class="row">
+    <div class="content">
+      {{ partial "frontpage/about.html" . }}
+    </div>
+  </section>
+  <section id="projects" class="row">
+    <div class="content">
+      {{ partial "frontpage/projects.html" . }}
+    </div>
+  </section>
+  <section id="talks" class="row">
+    <div class="content">
+      {{ partial "frontpage/talks.html" . }}
+    </div>
+  </section>
+  <section id="pubs" class="row">
+    <div class="content">
+      {{ partial "frontpage/publications.html" . }}
+    </div>
+  </section>
+</div>
+{{ partial "post-content.html" . }}
