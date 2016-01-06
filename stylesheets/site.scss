@@ -4,6 +4,16 @@
 @import '_navbar';
 @import '_lists';
 @import '_frontpage';
+@import '_content';
+
+a, a:hover, a:visited {
+  color: $accent-color;
+}
+
+body {
+  background-color: $light-color;
+  font-family: $font-family-sans-serif;
+}
 
 .btn.btn-default {
   text-transform: uppercase;

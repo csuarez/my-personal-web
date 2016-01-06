@@ -1,0 +1,40 @@
+.single {
+  font-size: 1.5em;
+  width: 100%;
+
+  header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: $darker-color;
+    text-align: center;
+    @include dashed-transition($darker-color);
+  }
+
+  h1 {
+    font-family: $font-family-serif;
+    color: $accent-color;
+    font-size: 5em;
+    margin: 0 auto;
+  }
+
+  .subtitle {
+    color: $light-color;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+
+  .content {
+    max-width: $container-desktop;
+    margin: 50px auto;
+    .featured-image {
+      width: 100%;
+      text-align: center;
+      margin: 1em auto;
+      img {
+        max-width: 100%;
+        max-height: 250px;
+      }
+    }
+  }
+}

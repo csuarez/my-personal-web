@@ -3,7 +3,7 @@
 }
 
 @mixin dashed-transition($color) {
-  & + section {
-    border-top: $color 1.5em dashed;
+  & + * {
+    border-top: $color 20px dashed;
   }
 }

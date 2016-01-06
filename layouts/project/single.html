@@ -1,5 +1,27 @@
 {{ partial "pre-content.html"}}
-<div class="content">
-  {{ .Content }}
+<div class="single">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <span class="subtitle">{{ .Params.subtitle }}</span>
+  </header>
+  <div class="wrapper">
+    <div class="content">
+      <div class="featured-image">
+        <img src="{{ .Site.BaseURL }}/{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
+      </div>
+      {{ .Content }}
+      <p>
+        <strong>Developed with:</strong>
+        <ul>
+          {{ range .Params.technologies }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </p>
+      {{ if isset .Params "github_url" }}
+        Check the <a href="{{ .Params.github_url }}" alt="{{ .Title }}" target="_blank"><strong>Github repository</strong></a>
+      {{ end }}
+    </div>
+  </div>
 </div>
 {{ partial "post-content.html"}}
