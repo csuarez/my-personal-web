@@ -174,14 +174,23 @@ $color3: #EEEEEE;
   margin-bottom: 2em;
   a {
     display: block;
+    transition: all 0.3s ease-in-out 0s;
+    padding: 1em 0;
     &:hover {
       text-decoration: none;
+      background: repeating-linear-gradient(
+        -55deg,
+        transparent,
+        transparent 20px,
+        rgba(0, 0, 0, 0.05) 20px,
+        rgba(0, 0, 0, 0.05) 40px
+      );
     }
     h3 {
       color: $color3;
       border-bottom: 3px dashed $color1;
       font-weight: 800;
-      font-size: 2em;
+      font-size: 1.5em;
       padding-bottom: 10px;
     }
     .subtitle {
@@ -215,5 +224,28 @@ $color3: #EEEEEE;
         color: $color0;
       }
     }
+  }
+}
+
+#pubs {
+  h2 {
+    color: $color2;
+  }
+}
+
+.publication-list {
+  text-align: left;
+  margin-bottom: 2em;
+  list-style: none;
+  li {
+    margin-bottom: 1em;
+  }
+  a {
+    font-weight: 800;
+    color: $color1;
+  }
+  .event {
+    font-style: italic;
+    font-size: 0.75em;
   }
 }

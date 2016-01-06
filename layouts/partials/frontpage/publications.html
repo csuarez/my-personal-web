@@ -1,11 +1,11 @@
 <h2>Publications</h2>
 <div class="col-sm-12">
-  <ul>
+  <ul class="publication-list">
     {{ range first 5 (where .Site.Pages "Section" "publication") }}
       {{ .Render "summary_publication" }}
     {{ end }}
   </ul>
 </div>
 <div class="col-sm-12">
-  <a href="#" class="btn btn-default">See all</a>
+  <a href="#" class="btn btn-default">See all publications</a>
 </div>
