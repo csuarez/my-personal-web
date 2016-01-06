@@ -1,0 +1,153 @@
+///////////////////////////////////////////
+// General
+///////////////////////////////////////////
+
+.front-page {
+  section {
+    padding: $padding-large-vertical*2 $padding-large-horizontal*2;
+    padding-bottom: $padding-large-vertical*5;
+  }
+  .content {
+    max-width: $container-desktop;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    h2 {
+      color: $light-color;
+      padding-bottom: 0.25em;
+      font-family: $font-family-serif;
+      text-transform: lowercase;
+      font-size: 5em;
+      text-align: center;
+    }
+  }
+}
+
+///////////////////////////////////////////
+// Cover section
+///////////////////////////////////////////
+
+#cover {
+  display: flex;
+  height: 100vh;
+  background: $darker-color;
+  & + section {
+    border-top: $darker-color 1.5em dashed;
+  }
+  color: $light-color;
+  font-family: $font-family-sans-serif;
+  h1 {
+    color: $accent-color;
+    font-size: 5em;
+    text-transform: lowercase;
+    font-family: $font-family-serif;
+  }
+  h2 {
+    color: $light-color;
+    font-size: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  img {
+    border-radius: 300px;
+    width: 400px;
+    border: 20px solid $dark-color;
+  }
+}
+
+///////////////////////////////////////////
+// About section
+///////////////////////////////////////////
+
+#about {
+  background: $dark-color;
+  color: $light-color;
+  text-align: left;
+  @include dashed-transition($dark-color);
+  .content {
+    text-align: left;
+  }
+}
+
+.column-list {
+  text-align: right;
+  padding-right: 3em;
+  h3 {
+    font-size: 1.5em;
+    font-family: $font-family-serif;
+    text-transform: uppercase;
+    color: $accent-color;
+    border-bottom: 3px dashed $accent-color;
+  }
+  ul {
+    padding-bottom: 0.5em;
+    list-style-position: inside;
+    li {
+      margin-bottom: 0.3em;
+      span.sub {
+        display: block;
+        font-size: 0.745em;
+        width: 100%;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        font-style: italic;
+      }
+    }
+    li.featured {
+      font-weight: 800;
+      text-decoration: underline;
+      & + ul {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+.column-list + .column-list {
+  text-align: left;
+}
+
+///////////////////////////////////////////
+// Projects section
+///////////////////////////////////////////
+
+#projects {
+  background: $accent-color;
+  @include dashed-transition($accent-color);
+}
+
+///////////////////////////////////////////
+// Publications section
+///////////////////////////////////////////
+
+#pubs {
+  background: $lighter-color;
+  h2 {
+    color: $accent-color;
+  }
+}
+
+///////////////////////////////////////////
+// Talks section
+///////////////////////////////////////////
+
+#talks {
+  background: $light-color;
+  @include dashed-transition($light-color);
+  h2 {
+    color: $dark-color;
+  }
+  .summary {
+    a {
+      h3 {
+        font-size: 1em;
+        color: $dark-color;
+        border-bottom: 3px dashed $accent-color;
+        min-height: 3em;
+      }
+      .subtitle {
+        color: $darker-color;
+      }
+    }
+  }
+}

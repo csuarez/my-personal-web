@@ -1,138 +1,9 @@
 @import '_bootstrap';
-
-$color0: #222831;
-$color1: #393E46;
-$color2: #00ADB5;
-$color3: #EEEEEE;
-
+@import '_variables';
+@import '_mixins';
 @import '_navbar';
-
-.front-page {
-  section {
-    padding: $padding-large-vertical*2 $padding-large-horizontal*2;
-    padding-bottom: $padding-large-vertical*5;
-  }
-  .content {
-    max-width: $container-desktop;
-    margin: auto;
-    text-align: center;
-    font-size: 1.5em;
-    h2 {
-      color: $color3;
-      padding-bottom: 0.25em;
-      font-family: 'Bree Serif', serif;
-      text-transform: lowercase;
-      font-size: 5em;
-      text-align: center;
-    }
-  }
-}
-
-//Frontpage
-#cover {
-  display: flex;
-  height: 100vh;
-  background: $color0;
-  & + section {
-    border-top: $color0 1.5em dashed;
-  }
-  color: $color3;
-  font-family: 'Open Sans', sans-serif;
-  h1 {
-    color: $color2;
-    font-size: 5em;
-    text-transform: lowercase;
-    font-family: 'Bree Serif', serif;
-  }
-  h2 {
-    color: $color3;
-    font-size: 2em;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  img {
-    border-radius: 300px;
-    width: 400px;
-    border: 20px solid $color1;
-  }
-}
-
-#about {
-  background: $color1;
-  color: $color3;
-  text-align: left;
-  & + section {
-    border-top: $color1 1.5em dashed;
-  }
-  .content {
-    text-align: left;
-  }
-}
-
-#projects {
-  & + section {
-    border-top: $color2 1.5em dashed;
-  }
-}
-
-#talks {
-  h2 {
-    color: $color1;
-  }
-  & + section {
-    border-top: $color3 1.5em dashed;
-  }
-}
-
-.column-list {
-  text-align: right;
-  padding-right: 3em;
-  h3 {
-    font-size: 1.5em;
-    font-family: 'Bree Serif', serif;
-    text-transform: uppercase;
-    color: $color2;
-    border-bottom: 3px dashed $color2;
-  }
-  ul {
-    padding-bottom: 0.5em;
-    list-style-position: inside;
-    li {
-      margin-bottom: 0.3em;
-      span.sub {
-        display: block;
-        font-size: 0.745em;
-        width: 100%;
-        margin-left: 1em;
-        margin-bottom: 1em;
-        font-style: italic;
-      }
-    }
-    li.featured {
-      font-weight: 800;
-      text-decoration: underline;
-      & + ul {
-        margin-bottom: 0.5em;
-      }
-    }
-  }
-}
-
-.column-list + .column-list {
-  text-align: left;
-}
-
-#projects {
-  background: $color2;
-}
-
-#talks {
-  background: $color3;
-}
-
-#pubs {
-  background: #FFFFFF;
-}
+@import '_lists';
+@import '_frontpage';
 
 .btn.btn-default {
   text-transform: uppercase;
@@ -141,14 +12,14 @@ $color3: #EEEEEE;
   font-weight: 800;
   position: relative;
   font-size: 24px;
-  background: $color0;
-  border: 0.5em solid $color0;
-  border-left: 0.75em solid $color0;
-  border-right: 0.75em solid $color0;
-  color: $color3;
-  box-shadow: 0 5px 10px -4px black;
+  background: $darker-color;
+  border: 0.5em solid $darker-color;
+  border-left: 0.75em solid $darker-color;
+  border-right: 0.75em solid $darker-color;
+  color: $light-color;
+  @include bottom-shadow();
   &:hover {
-    background: $color0;
+    background: $darker-color;
   }
 
   &:before {
@@ -158,7 +29,7 @@ $color3: #EEEEEE;
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: $color3;
+    background-color: $light-color;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
@@ -167,85 +38,5 @@ $color3: #EEEEEE;
   &:hover:before {
     visibility: visible;
     transform: scaleX(1);
-  }
-}
-
-.summary {
-  margin-bottom: 2em;
-  a {
-    display: block;
-    transition: all 0.3s ease-in-out 0s;
-    padding: 1em 0;
-    &:hover {
-      text-decoration: none;
-      background: repeating-linear-gradient(
-        -55deg,
-        transparent,
-        transparent 20px,
-        rgba(0, 0, 0, 0.05) 20px,
-        rgba(0, 0, 0, 0.05) 40px
-      );
-    }
-    h3 {
-      color: $color3;
-      border-bottom: 3px dashed $color1;
-      font-weight: 800;
-      font-size: 1.5em;
-      padding-bottom: 10px;
-    }
-    .subtitle {
-      text-transform: uppercase;
-      color: $color3;
-      font-size: 0.75em;
-    }
-    .featured-image {
-      max-width: 100%;
-      height: 200px;
-      display: flex;
-      img {
-        margin: auto;
-        max-width: 100%;
-        max-height: 200px;
-      }
-    }
-  }
-}
-
-#talks {
-  .summary {
-    a {
-      h3 {
-        font-size: 1em;
-        color: $color1;
-        border-bottom: 3px dashed $color2;
-        min-height: 3em;
-      }
-      .subtitle {
-        color: $color0;
-      }
-    }
-  }
-}
-
-#pubs {
-  h2 {
-    color: $color2;
-  }
-}
-
-.publication-list {
-  text-align: left;
-  margin-bottom: 2em;
-  list-style: none;
-  li {
-    margin-bottom: 1em;
-  }
-  a {
-    font-weight: 800;
-    color: $color1;
-  }
-  .event {
-    font-style: italic;
-    font-size: 0.75em;
   }
 }
