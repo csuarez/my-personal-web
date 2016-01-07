@@ -4,7 +4,7 @@
 @import '_navbar';
 @import '_lists';
 @import '_frontpage';
-@import '_content';
+@import '_single';
 
 a, a:hover, a:visited {
   color: $accent-color;
@@ -13,6 +13,16 @@ a, a:hover, a:visited {
 body {
   background-color: $light-color;
   font-family: $font-family-sans-serif;
+}
+
+footer {
+  background: $dark-color;
+  color: $light-color;
+  padding: 1em;
+  h5 {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 }
 
 .btn.btn-default {

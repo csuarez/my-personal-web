@@ -2,7 +2,9 @@
 <div class="single">
   <header>
     <h1>{{ .Title }}</h1>
-    <span class="subtitle">{{ .Params.subtitle }}</span>
+    {{ if isset .Params "subtitle" }}
+      <span class="subtitle">{{ .Params.subtitle }}</span>
+    {{ end }}
   </header>
   <div class="wrapper">
     <div class="content">
