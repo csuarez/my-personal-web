@@ -132,7 +132,7 @@
   li {
     a, a:hover, a:visited {
       color: $darker-color;
-    }    
+    }
   }
 }
 
@@ -145,18 +145,5 @@
   @include dashed-transition($light-color);
   h2 {
     color: $dark-color;
-  }
-  .summary {
-    a {
-      h3 {
-        font-size: 1em;
-        color: $dark-color;
-        border-bottom: 3px dashed $accent-color;
-        min-height: 3em;
-      }
-      .subtitle {
-        color: $darker-color;
-      }
-    }
   }
 }

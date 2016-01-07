@@ -1,0 +1,11 @@
+<div class="summary talk">
+  <a href="{{ .Permalink }}">
+    <div class="title">
+      <h3>{{ .Title }}</h3>
+    </div>
+    <div class="featured-image">
+      <img src="{{ .Site.BaseURL }}/{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
+    </div>
+    <p class="subtitle">{{ .Params.subtitle }}</p>
+  </a>
+</div>

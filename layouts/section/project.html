@@ -4,7 +4,7 @@
 <div class="row">
 {{ range (where .Site.Pages "Section" "project") }}
     <div class="col-sm-4 project">
-      {{ .Render "summary" }}
+      {{ .Render "summary_project" }}
     </div>
 {{ end }}
 </div>

@@ -1,7 +1,7 @@
 <h2>Projects</h2>
 {{ range first 3 (where .Site.Pages "Section" "project") }}
   <div class="col-sm-4 project">
-    {{ .Render "summary" }}
+    {{ .Render "summary_project" }}
   </div>
 {{ end }}
 <div class="col-sm-12">

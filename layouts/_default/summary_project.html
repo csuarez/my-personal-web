@@ -1,9 +1,11 @@
-<div class="summary">
+<div class="summary project">
   <a href="{{ .Permalink }}">
     <div class="featured-image">
       <img src="{{ .Site.BaseURL }}/{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
     </div>
-    <h3>{{ .Title }}</h3>
+    <div class="title">
+      <h3>{{ .Title }}</h3>
+    </div>
     <p class="subtitle">{{ .Params.subtitle }}</p>
   </a>
 </div>
