@@ -42,7 +42,7 @@
       text-align: center;
       margin: 1em auto;
       img {
-        max-width: 100%;
+        max-width: 80%;
         max-height: 250px;
       }
     }
@@ -58,8 +58,27 @@
     h1 {
       font-size: 3em;
     }
-    .subtitle {
+    header .subtitle {
       display: none;
     }
+  }
+}
+
+.page .summary {
+  h3 {
+    color: $dark-color;
+    border-bottom: 3px dashed $accent-color;
+  }
+  .subtitle {
+    color: $dark-color;
+  }
+  .featured-image img {
+    max-height: 200px;
+  }
+}
+
+.page.talk .summary {
+  h3 {
+    font-size: 1.5em;
   }
 }

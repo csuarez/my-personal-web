@@ -1,7 +1,7 @@
 <div class="summary">
   <a href="{{ .Permalink }}">
     <div class="featured-image">
-      <img src="{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
+      <img src="{{ .Site.BaseURL }}/{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
     </div>
     <h3>{{ .Title }}</h3>
     <p class="subtitle">{{ .Params.subtitle }}</p>

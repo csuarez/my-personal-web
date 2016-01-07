@@ -1,3 +1,4 @@
+{{ $.Scratch.Add "page_type" "single" }}
 {{ $.Scratch.Add "content_type" "publication" }}
 {{ partial "page/pre-content.html" . }}
 <h2>Abstract</h2>
@@ -11,6 +12,7 @@
   </ul>
 </p>
 <h2>More info</h2>
+<p><i>{{ .Params.conference_journal }}</i></p>
 {{ if isset .Params "researchgate_url" }}
   <p>Check the <a href="{{ .Params.researchgate_url }}" alt="{{ .Title }}" target="_blank"><strong>ResearchGate page</strong></a></p>
 {{ end }}

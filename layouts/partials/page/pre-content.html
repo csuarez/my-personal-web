@@ -1,5 +1,5 @@
 {{ partial "pre-content.html"}}
-<div class='page {{ $.Scratch.Get "content_type" }}'>
+<div class='page {{ $.Scratch.Get "page_type" }} {{ $.Scratch.Get "content_type" }}'>
   <header>
     <h1>{{ .Title }}</h1>
     {{ if isset .Params "subtitle" }}

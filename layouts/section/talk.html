@@ -1,8 +1,8 @@
 {{ $.Scratch.Add "page_type" "list" }}
-{{ $.Scratch.Add "content_type" "project" }}
+{{ $.Scratch.Add "content_type" "talk" }}
 {{ partial "page/pre-content.html" . }}
 <div class="row">
-{{ range (where .Site.Pages "Section" "project") }}
+{{ range (where .Site.Pages "Section" "talk") }}
     <div class="col-sm-4 project">
       {{ .Render "summary" }}
     </div>
