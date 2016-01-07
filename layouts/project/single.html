@@ -1,29 +1,18 @@
-{{ partial "pre-content.html"}}
-<div class="single">
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ if isset .Params "subtitle" }}
-      <span class="subtitle">{{ .Params.subtitle }}</span>
-    {{ end }}
-  </header>
-  <div class="wrapper">
-    <div class="content">
-      <div class="featured-image">
-        <img src="{{ .Site.BaseURL }}/{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
-      </div>
-      {{ .Content }}
-      <p>
-        <strong>Developed with:</strong>
-        <ul>
-          {{ range .Params.technologies }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-      </p>
-      {{ if isset .Params "github_url" }}
-        Check the <a href="{{ .Params.github_url }}" alt="{{ .Title }}" target="_blank"><strong>Github repository</strong></a>
-      {{ end }}
-    </div>
-  </div>
+{{ $.Scratch.Add "content_type" "project" }}
+{{ partial "page/pre-content.html" . }}
+<div class="featured-image">
+  <img src="{{ .Site.BaseURL }}/{{ .Params.featured_image }}" alt="{{ .Title }}"></img>
 </div>
-{{ partial "post-content.html"}}
+{{ .Content }}
+<p>
+  <strong>Developed with:</strong>
+  <ul>
+    {{ range .Params.technologies }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</p>
+{{ if isset .Params "github_url" }}
+  Check the <a href="{{ .Params.github_url }}" alt="{{ .Title }}" target="_blank"><strong>Github repository</strong></a>
+{{ end }}
+{{ partial "page/post-content.html" . }}

@@ -7,7 +7,3 @@
     border-top: $color 20px dashed;
   }
 }
-
-@mixin self-dashed-transition($color) {
-  border-top: $color 20px dashed;
-}

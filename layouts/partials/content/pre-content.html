@@ -1,0 +1,10 @@
+{{ partial "pre-content.html"}}
+<div class='page {{ $.Scratch.Get "content_type" }}'>
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ if isset .Params "subtitle" }}
+      <span class="subtitle">{{ .Params.subtitle }}</span>
+    {{ end }}
+  </header>
+  <div class="wrapper">
+    <div class="content">

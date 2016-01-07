@@ -1,11 +1,10 @@
-.single {
+.page {
   font-size: 1.5em;
   width: 100%;
   @include dashed-transition($light-color);
 
   header {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 20px;
     background: $darker-color;
     text-align: center;
     @include dashed-transition($darker-color);
@@ -16,6 +15,16 @@
     color: $accent-color;
     font-size: 5em;
     margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  h2 {
+    font-family: $font-family-serif;
+    font-size: 2em;
+    width: 100%;
+    border-bottom: 3px dashed $accent-color;
+    margin-bottom: $padding-large-vertical * 2;
+    padding-bottom: $padding-large-vertical;
   }
 
   .subtitle {
@@ -36,6 +45,21 @@
         max-width: 100%;
         max-height: 250px;
       }
+    }
+  }
+
+  &.publication {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  &.talk {
+    h1 {
+      font-size: 3em;
+    }
+    .subtitle {
+      display: none;
     }
   }
 }

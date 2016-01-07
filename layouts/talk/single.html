@@ -1,5 +1,12 @@
-{{ partial "navbar.html" }}
-<div class="content">
-  <script async class="speakerdeck-embed" data-id="{{ .Params.speakerdeck_data_id }}" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
-{{ partial "footer.html" }}
+{{ $.Scratch.Add "content_type" "talk" }}
+{{ partial "page/pre-content.html" . }}
+<h2>Information</h2>
+<ul class="list-unstyled">
+  <li><strong>Event</strong>: {{ .Params.event }}</li>
+  <li><strong>Place</strong>: {{ .Params.place }}</li>
+  <li><strong>Date</strong>: {{ .Date.Format "2006/01/02" }}</li>
+  <li><p>{{ .Content }}</p></li>
+</ul>
+<h2>Slides</h2>
+<script async class="speakerdeck-embed" data-id="{{ .Params.speakerdeck_data_id }}" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+{{ partial "page/post-content.html" . }}

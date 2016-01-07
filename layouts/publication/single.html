@@ -1,5 +1,17 @@
-{{ partial "navbar.html" }}
-<div class="content">
-  {{ .Content }}
-</div>
-{{ partial "footer.html" }}
+{{ $.Scratch.Add "content_type" "publication" }}
+{{ partial "page/pre-content.html" . }}
+<h2>Abstract</h2>
+{{ .Content }}
+<h2>Authors</h2>
+<p>
+  <ul>
+    {{ range .Params.authors }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</p>
+<h2>More info</h2>
+{{ if isset .Params "researchgate_url" }}
+  <p>Check the <a href="{{ .Params.researchgate_url }}" alt="{{ .Title }}" target="_blank"><strong>ResearchGate page</strong></a></p>
+{{ end }}
+{{ partial "page/post-content.html" . }}

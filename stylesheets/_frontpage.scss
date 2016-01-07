@@ -129,6 +129,11 @@
   h2 {
     color: $accent-color;
   }
+  li {
+    a, a:hover, a:visited {
+      color: $darker-color;
+    }    
+  }
 }
 
 ///////////////////////////////////////////
