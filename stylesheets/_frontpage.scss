@@ -81,7 +81,7 @@
     font-family: $font-family-serif;
     text-transform: uppercase;
     color: $accent-color;
-    border-bottom: 3px dashed $accent-color;
+    @include dashed-underline($accent-color);
   }
   ul {
     padding-bottom: 0.5em;
@@ -128,11 +128,6 @@
   background: $lighter-color;
   h2 {
     color: $accent-color;
-  }
-  li {
-    a, a:hover, a:visited {
-      color: $darker-color;
-    }
   }
 }
 

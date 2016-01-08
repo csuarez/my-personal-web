@@ -1,0 +1,16 @@
+{{ $.Scratch.Add "page_type" "list" }}
+{{ $.Scratch.Add "content_type" "talk" }}
+{{ partial "page/pre-content.html" . }}
+<div class="row">
+  <div class="col-sm-12">
+    {{ range .Data.Pages.GroupByDate "2006" }}
+      <h3>{{ .Key }}</h3>
+      {{ range .Pages }}
+        <ul class="publication-list">
+          {{ .Render "summary_publication" }}
+        </ul>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ partial "page/post-content.html" . }}

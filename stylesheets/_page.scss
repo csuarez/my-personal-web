@@ -28,7 +28,7 @@
     font-family: $font-family-serif;
     font-size: 2em;
     width: 100%;
-    border-bottom: 3px dashed $accent-color;
+    @include dashed-underline($accent-color);
     margin-bottom: $padding-large-vertical * 2;
     padding-bottom: $padding-large-vertical;
   }
@@ -65,7 +65,7 @@
 
 .page .summary {
   .title {
-    border-bottom: 3px dashed $accent-color;
+    @include dashed-underline($accent-color);
     h3 {
       color: $dark-color;
     }
@@ -76,4 +76,11 @@
   .featured-image img {
     max-height: 200px;
   }
+}
+
+.page.list.talk h3 {
+  font-family: $font-family-serif;
+  color: $accent-color;
+  font-size: 2em;
+  @include dashed-underline($accent-color);
 }

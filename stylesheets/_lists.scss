@@ -19,7 +19,7 @@
     .title {
       display: flex;
       width: 100%;
-      border-bottom: 3px dashed $dark-color;
+      @include dashed-underline($dark-color);
       text-align: center;
       padding-bottom: 10px;
       margin-bottom: 10px;
@@ -54,7 +54,7 @@
   a {
     padding: 0;
     .title {
-      border-bottom: 3px dashed $accent-color;
+      @include dashed-underline($accent-color);
       min-height: 4.5em;
       h3 {
         font-size: 1em;
@@ -76,6 +76,9 @@
   list-style: none;
   li {
     margin-bottom: 1em;
+    a, a:hover, a:visited {
+      color: $darker-color;
+    }
   }
   a {
     font-weight: 800;
