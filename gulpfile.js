@@ -7,10 +7,16 @@ var watch = require('gulp-watch');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 
 var sassInput = './stylesheets/**/*.scss';
 var sassOutput = './public/css';
+
+var jsInput = './scripts/**/*.js';
+var jsOutput = './public/js'
+
 var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
@@ -19,7 +25,6 @@ var sassOptions = {
 var hugoInput = [
   'archetypes/**/*.*',
   'content/**/*.*',
-  'data/**/*.*',
   'layouts/**/*.*',
   'static/**/*.*'
 ];
@@ -29,21 +34,30 @@ gulp.task('default', ['serve']);
 gulp.task('build', ['hugo', 'sass']);
 
 gulp.task('hugo', function() {
-  return executeGulpHugo();
+  return buildHugo();
 });
 
 gulp.task('sass', function () {
-  return executeGulpSass();
+  return buildSass();
 });
+
+gulp.task('js', function () {
+  return buildJs();
+});
+
 
 gulp.task('watch', function() {
   watch(sassInput, function (vinyl) {
     gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
-    return executeGulpSass().pipe(connect.reload());
+    return buildSass().pipe(connect.reload());
+  });
+  watch(jsInput, function (vinyl) {
+    gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
+    return buildJs().pipe(connect.reload());
   });
   watch(hugoInput, function (vinyl) {
     gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
-    return executeGulpHugo().pipe(connect.reload());
+    return buildHugo().pipe(connect.reload());
   });
 });
 
@@ -56,7 +70,7 @@ gulp.task('serve', function() {
   gulp.start('watch');
 });
 
-function executeGulpHugo() {
+function buildHugo() {
   return gulp
     .src('')
     .pipe(plumber({
@@ -68,7 +82,7 @@ function executeGulpHugo() {
   ));
 }
 
-function executeGulpSass() {
+function buildSass() {
   return gulp
     .src(sassInput)
     .pipe(plumber({
@@ -79,6 +93,16 @@ function executeGulpSass() {
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(gulp.dest(sassOutput));
+}
+
+function buildJs() {
+  return gulp.src(jsInput)
+    .pipe(plumber({
+      errorHandler: handleError
+    }))
+    .pipe(concat('site.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(jsOutput));
 }
 
 function handleError(error) {
