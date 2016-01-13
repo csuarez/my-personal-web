@@ -59,6 +59,9 @@ gulp.task('serve', function() {
 function executeGulpHugo() {
   return gulp
     .src('')
+    .pipe(plumber({
+      errorHandler: handleError
+    }))
     .pipe(shell([
       'hugo --buildDrafts'
     ]
