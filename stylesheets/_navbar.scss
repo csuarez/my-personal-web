@@ -35,6 +35,10 @@ nav .nav {
   }
 }
 
+.navbar-collapse {
+  transition-property: all;
+}
+
 @media (max-width: $screen-xs-max) {
   nav .title {
     position: absolute;
@@ -43,6 +47,7 @@ nav .nav {
     li > a {
       height: 44px;
       padding-top: 12px;
+      z-index: 666;
     }
   }
 
@@ -50,5 +55,20 @@ nav .nav {
     position: absolute;
     top: 0px;
     right: 0px;
+    z-index: 666;
+  }
+
+  .navbar-collapse {
+    padding-top: 64px;
+    background-color: $darker-color;
+    @include bottom-shadow();
+    padding-bottom: 10px;
+    ul li > a {
+      padding-left: 0;
+      height: 44px;
+      padding-top: 12px;
+      margin-left: 12px;
+      margin-right: 2px;
+    }
   }
 }
