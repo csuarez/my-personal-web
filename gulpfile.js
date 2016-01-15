@@ -9,6 +9,7 @@ var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var cssnano = require('gulp-cssnano');
 
 
 var sassInput = './stylesheets/**/*.scss';
@@ -92,6 +93,7 @@ function buildSass() {
     .pipe(sass(sassOptions))
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
+    .pipe(cssnano())
     .pipe(gulp.dest(sassOutput));
 }
 
