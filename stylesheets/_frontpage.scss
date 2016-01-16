@@ -3,6 +3,7 @@
 ///////////////////////////////////////////
 
 .front-page {
+  overflow-x: hidden;
   section {
     padding: $padding-large-vertical*2 $padding-large-horizontal*2;
     padding-bottom: $padding-large-vertical*5;
@@ -25,6 +26,20 @@
 
 .container-fluid {
   @include dashed-transition($lighter-color);
+}
+
+@media (max-width: $screen-xs-max) {
+  .front-page {
+    section {
+      padding: $padding-large-vertical $padding-large-horizontal;
+      padding-bottom: $padding-large-vertical*5;
+    }
+    .content {
+      h2 {
+        font-size: 3em;
+      }
+    }
+  }
 }
 
 ///////////////////////////////////////////
@@ -104,7 +119,7 @@ $photo-border-size: 20px;
 
 #cover {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   background: $darker-color;
   & + section {
     border-top: $darker-color 1.5em dashed;
@@ -117,11 +132,21 @@ $photo-border-size: 20px;
     text-transform: lowercase;
     font-family: $font-family-serif;
   }
-  h2 {
+  .i-am {
     color: $light-color;
     font-size: 2em;
     font-weight: 800;
     text-transform: uppercase;
+    display: block;
+    font-family: $font-family-sans-serif;
+    margin-bottom: 20px;
+    &.small {
+      font-size: 1.3em;
+      color: lighten($dark-color, 10);
+      i {
+        font-size: 0.9em;
+      }
+    }
   }
   .photo {
     position: relative;
@@ -137,6 +162,27 @@ $photo-border-size: 20px;
       position: absolute;
       top: calc(50% - #{$arrow-box-height / 2});
       right: calc(50% - #{$photo-width / 2} - #{$photo-border-size} - #{$arrow-box-width} - 10px);
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  #cover {
+    padding: 0px;
+    h1 {
+      font-size: 2.75em;
+      padding-bottom: $padding-large-vertical;
+    }
+    .photo img {
+      max-width: 100%;
+      border-radius: 0px;
+      border: none;
+    }
+    .i-am {
+      font-size: 1em;
+      &.small {
+        font-size: 0.75em;
+      }
     }
   }
 }

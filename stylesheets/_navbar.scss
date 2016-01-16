@@ -58,6 +58,10 @@ nav .nav {
     z-index: 666;
   }
 
+  .navbar-fixed-top {
+    position: absolute;
+  }
+
   .navbar-collapse {
     padding-top: 64px;
     background-color: $darker-color;

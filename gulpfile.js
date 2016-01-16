@@ -27,12 +27,13 @@ var hugoInput = [
   'archetypes/**/*.*',
   'content/**/*.*',
   'layouts/**/*.*',
-  'static/**/*.*'
+  'static/**/*.*',
+  'config.tml'
 ];
 
 gulp.task('default', ['serve']);
 
-gulp.task('build', ['hugo', 'sass']);
+gulp.task('build', ['hugo', 'sass', 'js']);
 
 gulp.task('hugo', function() {
   return buildHugo();
