@@ -60,3 +60,10 @@ footer {
     transform: scaleX(1);
   }
 }
+
+@media (max-width: $screen-xs-max) {
+  .btn.btn-default {
+    font-size: 16px;
+    margin-top: 1em;
+  }
+}

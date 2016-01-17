@@ -1,6 +1,6 @@
 <h2>Talks</h2>
 {{ range first 3 (where .Site.Pages "Section" "talk") }}
-  <div class="col-sm-4">
+  <div class="col-sm-4 col-talk">
     {{ .Render "summary_talk" }}
   </div>
 {{ end }}

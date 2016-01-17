@@ -74,6 +74,7 @@
   text-align: left;
   margin-bottom: 2em;
   list-style: none;
+  padding: 0px;
   li {
     margin-bottom: 1em;
     a, a:hover, a:visited {
@@ -87,5 +88,44 @@
   .event {
     font-style: italic;
     font-size: 0.75em;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .summary {
+    margin: 0em;
+    padding: 0px;
+    a {
+      padding: 0px;
+      padding-top: 1em;
+      @include dashed-underline($dark-color);
+      .title {
+        border: none;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      .subtitle {
+        color: $dark-color;
+      }
+    }
+  }
+
+  .summary.talk {
+    a {
+      .title {
+        border: none;
+        min-height: 0px;
+        margin-bottom: 0.5em;
+      }
+      .subtitle {
+        min-height: 0px;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+
+  .col-project, .col-talk {
+    padding: 0px;
   }
 }

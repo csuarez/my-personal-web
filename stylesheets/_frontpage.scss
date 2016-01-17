@@ -36,7 +36,8 @@
     }
     .content {
       h2 {
-        font-size: 3em;
+        font-size: 2em;
+        text-transform: uppercase;
       }
     }
   }
@@ -237,6 +238,24 @@ $photo-border-size: 20px;
 
 .column-list + .column-list {
   text-align: left;
+}
+
+@media (max-width: $screen-xs-max) {
+  .column-list {
+    padding: 0;
+    text-align: left;
+    ul.collapsable {
+      li {
+        display: inline;
+        &:after {
+          content: ', ';
+        }
+        &:last-child::after {
+          content: '.';
+        }
+      }
+    }
+  }
 }
 
 ///////////////////////////////////////////
