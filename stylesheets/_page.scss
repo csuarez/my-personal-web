@@ -7,6 +7,7 @@
     padding: 50px 20px;
     background: $darker-color;
     text-align: center;
+    overflow-x: hidden;
     @include dashed-transition($darker-color);
     .subtitle {
       color: $light-color;
@@ -83,4 +84,31 @@
   color: $accent-color;
   font-size: 2em;
   @include dashed-underline($accent-color);
+}
+
+@media (max-width: $screen-xs-max) {
+  .page {
+    header .subtitle {
+      font-size: 0.75em;
+    }
+    h1 {
+      font-size: 2.2em;
+    }
+    .content {
+      padding: $padding-large-vertical $padding-large-horizontal;
+      padding-top: 0em;
+    }
+  }
+
+  .publication.page {
+    h1 {
+      font-size: 1em;
+    }
+  }
+
+  .talk.page {
+    h1 {
+      font-size: 2em;
+    }
+  }
 }
