@@ -1,0 +1,7 @@
+{{ $.Scratch.Add "page_type" "list" }}
+{{ $.Scratch.Add "content_type" "about" }}
+{{ partial "page/pre-content.html" . }}
+<div class="row">
+  {{ partial "frontpage/about.html" . }}
+</div>
+{{ partial "page/post-content.html" . }}

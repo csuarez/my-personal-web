@@ -1,9 +1,9 @@
-<h2>Projects</h2>
+<h2 name="projects">Projects</h2>
 {{ range first 3 (where .Site.Pages "Section" "project") }}
   <div class="col-sm-4 col-project">
     {{ .Render "summary_project" }}
   </div>
 {{ end }}
 <div class="col-sm-12">
-  <a href="project/" class="btn btn-default">See all projects</a>
+  <a href="{{ .Site.BaseURL }}/project/" class="btn btn-default">See all projects</a>
 </div>
