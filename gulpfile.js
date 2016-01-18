@@ -15,7 +15,10 @@ var cssnano = require('gulp-cssnano');
 var sassInput = './stylesheets/**/*.scss';
 var sassOutput = './public/css';
 
-var jsInput = './scripts/**/*.js';
+var jsInput = [
+  './scripts/jquery-2.1.4.js',
+  './scripts/bootstrap.js'
+];
 var jsOutput = './public/js'
 
 var sassOptions = {
