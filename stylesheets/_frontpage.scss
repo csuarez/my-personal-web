@@ -99,19 +99,19 @@
   }
 }
 
-$arrow-box-border: 10px;
-$arrow-box-height: 100px;
-$arrow-box-width: 150px;
-$photo-width: 400px;
+$bubble-border: 10px;
+$bubble-height: 100px;
+$bubble-width: 150px;
+$photo-width: 350px;
 $photo-border-size: 20px;
 
-.arrow-box {
+.bubble {
 	position: relative;
 	background: $lighter-color;
-	border: $arrow-box-border solid $accent-color;
+	border: $bubble-border solid $accent-color;
   color: $accent-color;
-  height: $arrow-box-height;
-  width: $arrow-box-width;
+  height: $bubble-height;
+  width: $bubble-width;
   border-radius: 10px;
   display: flex;
   .content {
@@ -120,7 +120,7 @@ $photo-border-size: 20px;
     font-size: 50px;
   }
 }
-.arrow-box:after, .arrow-box:before {
+.bubble:after, .bubble:before {
 	right: 100%;
 	top: 50%;
 	border: solid transparent;
@@ -131,13 +131,13 @@ $photo-border-size: 20px;
 	pointer-events: none;
 }
 
-.arrow-box:after {
+.bubble:after {
 	border-color: rgba(136, 183, 213, 0);
 	border-right-color: $lighter-color;
 	border-width: 15px;
 	margin-top: -15px;
 }
-.arrow-box:before {
+.bubble:before {
 	border-color: rgba(194, 225, 245, 0);
 	border-right-color: $accent-color;
 	border-width: 29px;
@@ -177,7 +177,12 @@ $photo-border-size: 20px;
     }
   }
   .arrow {
-    animation: shake-vertical 1s ease-in-out;
+    animation: shake-vertical .5s ease-in-out;
+    animation-delay: 1s;
+    position: absolute;
+    bottom: $padding-large-vertical;
+    left: 0;
+    right: 0;
   }
   .photo {
     position: relative;
@@ -185,14 +190,14 @@ $photo-border-size: 20px;
       border-radius: 50%;
       width: $photo-width;
       border: $photo-border-size solid $dark-color;
-      &:hover + .arrow-box {
+      &:hover + .bubble {
         animation: shake-horizontal .5s ease-in-out;
       }
     }
-    .arrow-box {
+    .bubble {
       position: absolute;
-      top: calc(50% - #{$arrow-box-height / 2});
-      right: calc(50% - #{$photo-width / 2} - #{$photo-border-size} - #{$arrow-box-width} - 10px);
+      top: calc(50% - #{$bubble-height / 2});
+      right: calc(50% - #{$photo-width / 2} - #{$photo-border-size} - #{$bubble-width} - 10px);
     }
   }
 }
