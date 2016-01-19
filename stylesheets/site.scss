@@ -6,6 +6,10 @@
 @import '_frontpage';
 @import '_page';
 
+::selection {
+  background: #ffb7b7;
+}
+
 a, a:hover, a:visited {
   color: $accent-color;
 }
@@ -38,8 +42,13 @@ footer {
   border-right: 0.75em solid $darker-color;
   color: $light-color;
   @include bottom-shadow();
-  &:hover, &:active {
+
+  &:hover, &:active, &:focus {
     background: $darker-color;
+    color: $light-color;
+    border: 0.5em solid $darker-color;
+    border-left: 0.75em solid $darker-color;
+    border-right: 0.75em solid $darker-color;
   }
 
   &:before {
@@ -55,7 +64,7 @@ footer {
     transition: all 0.3s ease-in-out 0s;
   }
 
-  &:hover:before, &:hover:active {
+  &:hover:before, &:active:before, &:focus:before {
     visibility: visible;
     transform: scaleX(1);
   }
