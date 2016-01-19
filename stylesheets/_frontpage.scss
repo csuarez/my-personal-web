@@ -180,7 +180,7 @@ $photo-border-size: 20px;
     animation: shake-vertical .5s ease-in-out;
     animation-delay: 1s;
     position: absolute;
-    bottom: $padding-large-vertical;
+    bottom: $padding-large-vertical * 2;
     left: 0;
     right: 0;
   }

@@ -79,6 +79,12 @@
   }
 }
 
+@media (max-width: $screen-xs-max) {
+  .page .summary .title {
+    border: none;
+  }
+}
+
 .page.list.talk h3 {
   font-family: $font-family-serif;
   color: $accent-color;
@@ -110,5 +116,10 @@
     h1 {
       font-size: 2em;
     }
+  }
+
+  .page.list.talk h3 {
+    border: none;
+    padding-top: 0.5em;
   }
 }

@@ -135,3 +135,11 @@
     }
   }
 }
+
+.page.list .content {
+  margin-top: 0;
+}
+
+.page.list.about .row {
+  padding: 0 $padding-large-horizontal;
+}
