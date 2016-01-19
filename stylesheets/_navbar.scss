@@ -17,7 +17,7 @@ nav .nav {
     i.fa {
       color: $light-color;
     }
-    &:hover {
+    &:hover, &:active {
       color: $accent-color;
       background-color: rgba(0, 0, 0, .8);
       transition: all ease-out 0.1s;

@@ -6,7 +6,7 @@
     display: block;
     transition: all 0.3s ease-in-out 0s;
     padding: 1em 0;
-    &:hover {
+    &:hover, &:active {
       text-decoration: none;
       background: repeating-linear-gradient(
         -55deg,

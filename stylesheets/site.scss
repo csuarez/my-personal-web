@@ -38,7 +38,7 @@ footer {
   border-right: 0.75em solid $darker-color;
   color: $light-color;
   @include bottom-shadow();
-  &:hover {
+  &:hover, &:active {
     background: $darker-color;
   }
 
@@ -55,7 +55,7 @@ footer {
     transition: all 0.3s ease-in-out 0s;
   }
 
-  &:hover:before {
+  &:hover:before, &:hover:active {
     visibility: visible;
     transform: scaleX(1);
   }
