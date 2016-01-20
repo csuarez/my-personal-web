@@ -8,6 +8,10 @@
   <li><strong>Date</strong>: {{ .Date.Format "2006/01/02" }}</li>
   <li><p>{{ .Content }}</p></li>
 </ul>
-<h2>Slides</h2>
-<script async class="speakerdeck-embed" data-id="{{ .Params.speakerdeck_data_id }}" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+{{ if isset .Params "speakerdeck_data_id" }}
+  <h2>Slides</h2>
+  {{ range .Params.speakerdeck_data_id }}
+    <script async class="speakerdeck-embed" data-id="{{ . }}" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+  {{ end }}
+{{ end }}
 {{ partial "page/post-content.html" . }}
