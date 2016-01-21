@@ -1,0 +1,8 @@
++++
+authors = ["Marcelo Risk", "Francisco Prieto Castrillo", "Juan Francisco García Eijo", "César Suárez Ortega", "María Botón Fernández", "Alfonso Pardo", "Manuel Rubio del Solar", "Raúl Ramos Pollán"]
+conference_journal = "Network Operations and Management Symposium, 2009. LANOMS 2009. Latin American. DOI: 10.1109/LANOMS.2009.5338791 "
+date = "2009-10-13"
+researchgate_url = "https://www.researchgate.net/publication/261462590_CardioGrid_A_framework_for_the_analysis_of_cardiological_signals_in_Grid_computing"
+title="CardioGrid: A framework for the analysis of cardiological signals in Grid computing"
++++
+The present paper describes the development of the CardioGrid framework into the Grid infrastructure. The core Grid services; workload management system (WMS), data management system and grid authentication have been implemented. Additionally, a Web-based tool -the CardioGrid portal-has been developed to facilitate the user interaction with the Grid. As a result, the user is able to process the electrocardiogram (ECG) signals obtained form a portable data acquisition device and to process them on the Grid. Once the CardioGrid portal is prompted and the user identity is verified through a digital X.509 certificate, the operator may either upload new raw ECG data to the grid storage elements or use already stored data. Then, subsequent analytics from these data are performed as Grid jobs and relevant medical quantities are derived through a middleware job retrieval mechanism. In summary, this paper describes the development of a medical Grid based system, and its integration to an existing platform for digital repositories infrastructure.

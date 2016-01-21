@@ -1,0 +1,14 @@
++++
+authors = ["César Suárez Ortega", "José Miguel Franco-Valiente"]
+conference_journal = "DOI: 10.1109/HealthCom.2013.6720661 Conference: e-Health Networking, Applications & Services (Healthcom), 2013 IEEE 15th International Conference on, At Lisbon, Portugal"
+date = "2013-10-09"
+researchgate_url = "https://www.researchgate.net/publication/259150839_Using_CAD_systems_and_e-Learning_in_radiologists_training"
+title = "Using CAD systems and e-Learning in radiologists training"
++++
+Breast cancer is one of the most diagnosed types of cancer. Early detection of breast cancer is the best practice to reduce its high mortality rate. Double reading is a common practice to avoid missed cancer cases during the lecture of mammograms. Due to the high cost of this technique and the lack of certified radiologists, computer-aided diagnosis systems have become very popular in the last decade. However, this technique is not perfect, and has some significant disadvantages, like higher recall rates.
+
+Simultaneously, e-Learning (the use of information and communication technologies for learning or ICTs) during medical education has been demonstrated to be a useful resource in the training of new physicians. In radiology is typical to use anonymized cases to train new radiologists. This practice perfectly fits with some e-Learning practices, based on the use of simulated or real cases combined with auto-evaluation tools. The advantages and disadvantages of CAD systems as a basis to develop self-assessment e-Learning tools are discussed in this work. Some CAD system problems like high recall rates are less important in education than in the clinical practice, but the higher rate of false-positives could be a problem, especially in the use of CAD systems by inexperienced radiologists.
+
+With these topics in mind, the IMED project (collaboration among CETA-CIEMAT, INEGI and FMUP-HSJ created to find new ways to improve breast cancer diagnosis) is enhancing e-Learning tools with CAD systems. This development is based on three tools developed by the project: (1) BCDR, a repository which stores clinical data and mammograms related to breast cancer studies, (2) MIWAD, a workstation with CAD features that helps doctors during the breast cancer diagnosis and (3) a set of Machine Learning Classifiers (MLCs) integrated in MIWAD and trained with BCDR data, with the ability to classify abnormalities in mammograms.
+
+This new training tool is called Aloe, and it is in its early stages of development. It is divided in a REST service and in a web frontend which will implement a workflow that will allow students to auto-evaluate their skills reading mammograms. An alpha version will be released soon to obtain early feedback from users, in order to check the usefulness of CAD systems in e-Learning methods. 

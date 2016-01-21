@@ -1,0 +1,8 @@
++++
+authors = ["Raúl Ramos Pollán", "Miguel Ángel Guevara López", "César Suárez Ortega", "Guillermo Díaz Herrero", "José Miguel Franco Valiente", "Manuel Rubio del Solar"]
+conference_journal = "Journal of Medical Systems (Impact Factor: 2.21). 04/2011; 36(4):2259-69. DOI: 10.1007/s10916-011-9693-2"
+date = "2011-04-15"
+researchgate_url = "https://www.researchgate.net/publication/51038551_Discovering_Mammography-based_Machine_Learning_Classifiers_for_Breast_Cancer_Diagnosis"
+title="Discovering Mammography-based Machine Learning Classifiers for Breast Cancer Diagnosis"
++++
+This work explores the design of mammography-based machine learning classifiers (MLC) and proposes a new method to build MLC for breast cancer diagnosis. We massively evaluated MLC configurations to classify features vectors extracted from segmented regions (pathological lesion or normal tissue) on craniocaudal (CC) and/or mediolateral oblique (MLO) mammography image views, providing BI-RADS diagnosis. Previously, appropriate combinations of image processing and normalization techniques were applied to reduce image artifacts and increase mammograms details. The method can be used under different data acquisition circumstances and exploits computer clusters to select well performing MLC configurations. We evaluated 286 cases extracted from the repository owned by HSJ-FMUP, where specialized radiologists segmented regions on CC and/or MLO images (biopsies provided the golden standard). Around 20,000 MLC configurations were evaluated, obtaining classifiers achieving an area under the ROC curve of 0.996 when combining features vectors extracted from CC and MLO views of the same case. 

@@ -1,0 +1,14 @@
++++
+authors = ["José Miguel Franco Valiente", "César Suárez Ortega", "Guillermo Díaz Herrero"]
+conference_journal = "Gisela-Chain conference, At Mexico City"
+date = "2012-07-18"
+researchgate_url = "https://www.researchgate.net/publication/259150729_Developing_a_portlet_for_the_GISELA_Science_Gateway_to_process_hyperspectral_images"
+title = "Developing a portlet for the GISELA Science Gateway to process hyperspectral images"
++++
+Nowadays, Science Gateways are a trending topic in the Grid community. This kind of web portals allows sending jobs to a Grid infrastructure through a single process. Science Gateway users can configure the vast majority of the parameters Command Line Interface (CLI) may need. This way, it is possible to specify job input and output files, monitor the status of a job and download its output when finished.
+
+Science Gateways are a good tool for accessing distributed resources, not only Grid resources, but also other paradigms, since Science Gateways are considered as an universal interface to many kinds of distributed computing resources.
+
+In this case, the GISELA Science Gateway development environment has been used to build a portlet for running a hyperspectral image processing application. Hyperspectral imaging, like other spectral imaging models, collect and process information gathered across the electromagnetic spectrum. The human eye sees visible light in three bands (red, green, and blue), however spectral imaging divides the spectrum into more bands. This technique of separating band images can be extended beyond the visible ones. The ported algorithm is known as Pixel Purity Index (PPI) and it is used for finding those pixels that present the most spectrally purity (extreme) value in multispectral and hyperspectral images. The Pixel Purity Index is computed by repeatedly projecting n-dimensional scatterplots onto a random unit vector. The extreme pixels in each projection are those pixels that fall onto the ends of the unit vector. The total number of times each pixel is marked as extreme is noted. A result image is created in which the value of each pixel corresponds to the number of times that the pixel was recorded as extreme. This algorithm is very useful for identifying which pixels are pure. Purity means that a pixel is only composed of a unique substance such as water, forest, ground, etc. The porting of the PPI algorithm to the GISELA Science Gateway will allow users to process 186 a wide range of hyperspectral images in a reasonable cost time. A single execution on a workstation is a high time-consuming task owing to the size of the images (can be sizes measured on several Gigabytes).
+
+This work deals with the experience obtained during the application porting. It has been made through the GISELA Science Gateway development environment. The work also shows the way initial problems were solved and the procedure for performing an application successfully porting.

@@ -1,7 +1,7 @@
 +++
-authors = []
+authors = ["Frederico Valiente", "Augusto Silva", "Carlos Costa", "José Miguel Franco Valiente", "César Suárez Ortega"]
 conference_journal = "International Journal of Image Mining 10/2015; 1(2/3):261 - 278. DOI: 10.1504/IJIM.2015.073027"
-date = "2016-01-05T21:49:16+01:00"
+date = "2015-11-01"
 researchgate_url = "https://www.researchgate.net/publication/283725292_Performance_analysis_of_machine_learning_algorithms_for_automated_diagnosis_using_a_dataflow-based_approach_on_the_grid"
 title = "Performance analysis of machine learning algorithms for automated diagnosis using a dataflow-based approach on the grid"
 +++
