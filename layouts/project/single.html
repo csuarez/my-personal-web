@@ -6,6 +6,7 @@
 </div>
 {{ .Content }}
 <p>
+{{ if isset .Params "technologies" }}
   <strong>Developed with:</strong>
   <ul>
     {{ range .Params.technologies }}
@@ -13,6 +14,7 @@
     {{ end }}
   </ul>
 </p>
+{{ end }}
 {{ if isset .Params "github_url" }}
   Check the <a href="{{ .Params.github_url }}" alt="{{ .Title }}" target="_blank"><strong>Github repository</strong></a>
 {{ end }}
