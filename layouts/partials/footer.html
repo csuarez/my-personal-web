@@ -1,9 +1,11 @@
 <footer>
   <div class="container">
     <div class="col-sm-4">
-      <h5>Built with Hugo :)</h5>
+      <h5>Built with Hugo {{ .Hugo.Version }}</h5>
       <ul class="list-unstyled">
         <li>Check the <a href="https://github.com/csuarez/csuarez.github.io" title="Web source code" target="_blank">source code</a>.</li>
+        <li>Last change: {{ dateFormat "2006/01/02" .Site.LastChange }}</li>.
+        </li>
       </ul>
     </div>
     <div class="col-sm-4">
