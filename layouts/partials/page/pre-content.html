@@ -1,4 +1,4 @@
-{{ partial "pre-content.html"}}
+{{ partial "pre-content.html" . }}
 <div class='page {{ $.Scratch.Get "page_type" }} {{ $.Scratch.Get "content_type" }}'>
   <header>
     <h1>{{ .Title }}</h1>
