@@ -36,7 +36,7 @@ var hugoInput = [
 
 gulp.task('default', ['serve']);
 
-gulp.task('build', ['hugo', 'sass', 'js']);
+gulp.task('build', ['hugo', 'sass', 'js', 'cname']);
 
 gulp.task('hugo', function() {
   return buildHugo();
@@ -48,6 +48,11 @@ gulp.task('sass', function () {
 
 gulp.task('js', function () {
   return buildJs();
+});
+
+gulp.task('cname', function () {
+  gulp.src('./CNAME')
+    .pipe(gulp.dest('./public'));
 });
 
 
