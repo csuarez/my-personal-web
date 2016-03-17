@@ -1,3 +1,4 @@
+# For development: baseurl="http://0.0.0.0:6789"
 baseurl = "http://csuarez.me"
 languageCode = "en"
 title = "César Suárez, Software Engineer"

@@ -11,7 +11,9 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
-
+var rev = require('gulp-rev');
+var buffer = require('gulp-buffer');
+var revCollector = require('gulp-rev-collector');
 
 var sassInput = './stylesheets/**/*.scss';
 var sassOutput = './public/css';
@@ -28,35 +30,44 @@ var sassOptions = {
 };
 
 var hugoInput = [
-  'archetypes/**/*.*',
-  'content/**/*.*',
-  'layouts/**/*.*',
-  'static/**/*.*',
-  'config.tml'
+  './archetypes/**/*.*',
+  './content/**/*.*',
+  './layouts/**/*.*',
+  './static/**/*.*',
+  './config.tml'
 ];
 
-var imageInput = 'static/img/**/*';
+var imageInput = './static/img/**/*';
 
-var imageOutput = 'public/img'
+var imageOutput = './public/img'
 
 gulp.task('default', ['serve']);
 
-gulp.task('build', ['hugo', 'sass', 'js', 'img']);
+gulp.task('build', ['hugo', 'sass', 'js', 'img', 'replace']);
 
 gulp.task('hugo', function() {
   return buildHugo();
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
   return buildSass();
 });
 
-gulp.task('js', function () {
+gulp.task('js', function() {
   return buildJs();
 });
 
-gulp.task('img', function () {
+gulp.task('img', function() {
   return buildImages();
+});
+
+gulp.task('replace', function() {
+  return gulp
+    .src(['./rev-manifest.json', './public/**/*.html'])
+    .pipe(revCollector({
+      replaceReved: true
+    }))
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('watch', function() {
@@ -106,7 +117,13 @@ function buildSass() {
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(cssnano())
-    .pipe(gulp.dest(sassOutput));
+    .pipe(buffer())
+    .pipe(rev())
+    .pipe(gulp.dest(sassOutput))
+    .pipe(rev.manifest({
+			base: sassOutput,
+			merge: true
+		}));
 }
 
 function buildJs() {
@@ -116,7 +133,13 @@ function buildJs() {
     }))
     .pipe(concat('site.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(jsOutput));
+    .pipe(buffer())
+    .pipe(rev())
+    .pipe(gulp.dest(jsOutput))
+    .pipe(rev.manifest({
+			base: jsOutput,
+			merge: true
+		}));
 }
 
 function buildImages() {

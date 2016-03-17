@@ -1,2 +1,5 @@
 # NPM
 node_modules
+
+#grunt-rev
+rev-manifest.json
