@@ -10,6 +10,7 @@ var connect = require('gulp-connect');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
+var imagemin = require('gulp-imagemin');
 
 
 var sassInput = './stylesheets/**/*.scss';
@@ -19,7 +20,7 @@ var jsInput = [
   './scripts/jquery-2.1.4.js',
   './scripts/bootstrap.js'
 ];
-var jsOutput = './public/js'
+var jsOutput = './public/js';
 
 var sassOptions = {
   errLogToConsole: true,
@@ -34,9 +35,13 @@ var hugoInput = [
   'config.tml'
 ];
 
+var imageInput = 'static/img/**/*';
+
+var imageOutput = 'public/img'
+
 gulp.task('default', ['serve']);
 
-gulp.task('build', ['hugo', 'sass', 'js']);
+gulp.task('build', ['hugo', 'sass', 'js', 'img']);
 
 gulp.task('hugo', function() {
   return buildHugo();
@@ -48,6 +53,10 @@ gulp.task('sass', function () {
 
 gulp.task('js', function () {
   return buildJs();
+});
+
+gulp.task('img', function () {
+  return buildImages();
 });
 
 gulp.task('watch', function() {
@@ -108,6 +117,18 @@ function buildJs() {
     .pipe(concat('site.js'))
     .pipe(uglify())
     .pipe(gulp.dest(jsOutput));
+}
+
+function buildImages() {
+  return gulp.src(imageInput)
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [
+        {removeViewBox: false},
+        {cleanupIDs: false}
+      ]
+    }))
+    .pipe(gulp.dest(imageOutput));
 }
 
 function handleError(error) {
