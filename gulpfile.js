@@ -14,6 +14,8 @@ var imagemin = require('gulp-imagemin');
 var rev = require('gulp-rev');
 var buffer = require('gulp-buffer');
 var revCollector = require('gulp-rev-collector');
+var htmlmin = require('gulp-htmlmin');
+var rename = require('gulp-rename');
 
 var sassInput = './stylesheets/**/*.scss';
 var sassOutput = './public/css';
@@ -38,12 +40,14 @@ var hugoInput = [
 ];
 
 var imageInput = './static/img/**/*';
+var imageOutput = './public/img';
 
-var imageOutput = './public/img'
+var configDevFile = './config.dev.toml';
+var configProdFile = './config.prod.toml';
 
 gulp.task('default', ['serve']);
 
-gulp.task('build', ['hugo', 'sass', 'js', 'img', 'replace']);
+gulp.task('build', ['hugo', 'sass', 'js', 'img', 'html']);
 
 gulp.task('hugo', function() {
   return buildHugo();
@@ -61,16 +65,25 @@ gulp.task('img', function() {
   return buildImages();
 });
 
-gulp.task('replace', function() {
-  return gulp
-    .src(['./rev-manifest.json', './public/**/*.html'])
-    .pipe(revCollector({
-      replaceReved: true
-    }))
-    .pipe(gulp.dest('public'));
+gulp.task('html', function() {
+  return buildHtml();
+});
+
+gulp.task('config-dev', function() {
+  return changeConfigFile(configDevFile);
+});
+
+gulp.task('config-prod', function() {
+  return changeConfigFile(configProdFile);
 });
 
 gulp.task('watch', function() {
+
+  changeConfigFile(configDevFile);
+  buildHugo();
+  buildSass();
+  buildJs();
+
   watch(sassInput, function (vinyl) {
     gutil.log(gutil.colors.green(vinyl.relative), 'fired', gutil.colors.green(vinyl.event));
     return buildSass().pipe(connect.reload());
@@ -154,6 +167,16 @@ function buildImages() {
     .pipe(gulp.dest(imageOutput));
 }
 
+function buildHtml() {
+  return gulp
+    .src(['./rev-manifest.json', './public/**/*.html'])
+    .pipe(revCollector({
+      replaceReved: true
+    }))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('public'));
+}
+
 function handleError(error) {
   gutil.beep();
   var message = null;
@@ -164,4 +187,10 @@ function handleError(error) {
   }
   gutil.log(gutil.colors.red(message));
   this.emit('end');
+}
+
+function changeConfigFile(newConfigFile) {
+  return gulp.src(newConfigFile)
+    .pipe(rename('config.toml'))
+    .pipe(gulp.dest('./'));
 }
