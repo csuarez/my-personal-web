@@ -4,7 +4,7 @@ featured_image = "img/projects/other-projects.png"
 subtitle = "Other small projects"
 title = "Other projects"
 url = ""
-weight = 5
+weight = 6
 +++
 Here I collect another small projects:
 
