@@ -6,7 +6,7 @@ subtitle = "gLite 3.2 Java library easy as a piece of cake"
 technologies = ["Java", "jUnit", "gLite"]
 title = "gridCake"
 url = ""
-weight = 3
+weight = 4
 +++
 gridCake is a gLite 3.2 compatible Java library.  It has been developed using jLite and some of the gLite *official* libraries. The library is focused on hiding the complexities of the Grid, and it supports the core Grid services:
 
