@@ -1,5 +1,5 @@
 +++
-date = "2016-01-05T19:20:05+01:00"
+date = "2019-08-03T19:20:05+01:00"
 featured_image = "img/projects/suicidebystar-logo.png"
 subtitle = "Webzine about alternative & underground music"
 technologies = ["Wordpress", "jQuery", "LESS", "PHPBB3"]
