@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/csuarez/csuarez.github.io/issues"
   },
-  "homepage": "https://github.com/csuarez/csuarez.github.io"
+  "homepage": "https://github.com/csuarez/csuarez.github.io",
+  "dependencies": {
+    "imagemin-jpegtran": "^7.0.0"
+  }
 }

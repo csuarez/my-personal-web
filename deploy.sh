@@ -4,8 +4,8 @@ echo "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
 npm install
-gulp config-prod
-gulp build
+npx gulp config-prod
+npx gulp build
 
 # Go To Public folder
 cd public
