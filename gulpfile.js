@@ -44,7 +44,7 @@ var configProdFile = "./config.prod.toml";
 
 gulp.task("default", ["serve"]);
 
-gulp.task("build", ["hugo", "sass", "js", /*'img',*/ "html"]);
+gulp.task("build", ["hugo", "sass", "js", /*"img",*/ "html"]);
 
 gulp.task("hugo", function () {
   return buildHugo();
